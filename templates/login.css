@@ -2,9 +2,9 @@ body, html {
     height: 100%;
   }
   
-  .bg {
+.bg {
     /* The image used */
-    background-image: url("fondlogin.jpg");
+    background-image: url(https://i.ibb.co/tqV9vkR/fondlogin.jpg);
   
     /* Full height */
     height: 100%;
@@ -13,4 +13,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+.test
+{
+  text-decoration-color: brown;
 }

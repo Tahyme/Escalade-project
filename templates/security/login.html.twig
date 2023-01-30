@@ -1,9 +1,14 @@
-{% extends 'templatelogin.html.twig' %}
+{% include 'templatelogin.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Bienvenue !{% endblock %}
+
+
 {% block stylesheets %}
 {% endblock %}
+
 {% block body %}
+<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+<div class="bg">
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -11,11 +16,11 @@
 
     {% if app.user %}
         <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+            Vous êtes connecté {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
+    <h1 class="h3 mb-3 font-weight-normal test">Se connecter</h1>
     <label for="inputEmail">Email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
     <label for="inputPassword">Password</label>
@@ -40,4 +45,5 @@
         Sign in
     </button>
 </form>
+</div>
 {% endblock %}
